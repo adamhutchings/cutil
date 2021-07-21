@@ -46,6 +46,8 @@ int rm_folder(char * path) {
     /* Change back */
     chdir("..");
 
+    closedir(dir);
+
     rmdir(path);
 
     return count;
