@@ -15,7 +15,9 @@ int main(int argc, char** argv) {
     }
 
     if (argc > 3) {
+        // Check if the -n flag was given
         if (!strcmp(argv[2], "-n")) {
+            // Convert the arg after -n to an integer and use it as the max
             max = atoi(argv[3]);
         } else {
             printf("wrong argument supplied '%s'", argv[2]);
@@ -28,6 +30,8 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
+    // Check if it's reached the max line limit and if there are still more
+    // lines to print
     while (increment < max && getline(&line, &len, fp) != -1) {
         printf("%s",line);
         increment++;
