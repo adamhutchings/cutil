@@ -25,8 +25,7 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
-    while (increment < max) {
-        getline(&line, &len, fp);
+    while (increment < max && getline(&line, &len, fp) != -1) {
         printf("%s",line);
         increment++;
     }
