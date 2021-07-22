@@ -17,6 +17,9 @@ int main(int argc, char** argv) {
     if (argc > 3) {
         if (!strcmp(argv[2], "-n")) {
             max = atoi(argv[3]);
+        } else {
+            printf("wrong argument supplied '%s'", argv[2]);
+            exit(EXIT_FAILURE);
         }
     }
 
