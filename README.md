@@ -2,6 +2,7 @@
 Cutil is a rewrite of the gnu core utils, also in C. Written by Adam Hutchings and Jake Roggenbuck.
 
 # List
+- [cat.c](src/cat.c)
 - [ls.c](src/ls.c)
 - [nl.c](src/nl.c)
 - [yes.c](src/yes.c)
